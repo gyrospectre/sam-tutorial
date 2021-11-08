@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Timeout: 60
+
+Resources:
+  LambdaTutorial:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: app.handler
+      Runtime: python3.9
+
+Outputs:
+  LambdaTutorial:
+    Description: "Tutorial Lambda Function ARN"
+    Value: !GetAtt LambdaTutorial.Arn
