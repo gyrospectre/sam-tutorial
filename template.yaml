@@ -17,3 +17,4 @@ Outputs:
   LambdaTutorial:
     Description: "Tutorial Lambda Function ARN"
     Value: !GetAtt LambdaTutorial.Arn
+
